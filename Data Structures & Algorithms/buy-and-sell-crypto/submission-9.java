@@ -1,0 +1,22 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        //CONFUSING DONT LOOK
+        int l=0;
+        int r=1;
+        int maxProfit = 0;
+        while(r < prices.length) {
+            if(prices[l] < prices[r]) {
+                int profit = prices[r] - prices[l];
+                maxProfit = Math.max(maxProfit, profit);
+                r++;
+            } else {
+                l++;
+                if(l==r) r++;
+            }
+
+            
+            
+        }
+        return maxProfit;
+    }
+}
